@@ -1,0 +1,27 @@
+:root {
+  --ink: #182522;
+  --muted: #6b7772;
+  --paper: #f7f5ef;
+  --surface: #fffdf9;
+  --line: #dedfd7;
+  --teal: #0f665c;
+  --teal-dark: #0b403b;
+  --coral: #ee6d4d;
+  --display: Georgia, 'Times New Roman', serif;
+  --body: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  font: 16px/1.5 var(--body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+#root {
+  min-height: 100svh;
+}

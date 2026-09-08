@@ -1,0 +1,63 @@
+.app-shell > nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 22px max(24px, calc((100% - 1180px) / 2));
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+.nav-logo { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+.nav-logo-mark { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid var(--teal); border-radius: 50% 50% 50% 8px; background: var(--teal); color: #fff; font: 700 0.95rem var(--display); transform: rotate(-12deg); }
+.nav-logo-mark span { display: block; transform: rotate(12deg); }
+.nav-logo-name { font: 700 1.45rem var(--display); letter-spacing: -0.04em; }
+.nav-logo-name > span { color: var(--coral); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--teal); border-bottom-color: var(--coral); }
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+.theme-toggle-btn:hover { border-color: var(--teal); background: rgba(15, 102, 92, 0.08); }
+.theme-icon { display: grid; width: 18px; height: 18px; place-items: center; line-height: 1; }
+.theme-icon--sun { color: var(--coral); }
+.theme-icon--moon { color: var(--teal); }
+.theme-switch { position: relative; width: 30px; height: 16px; border-radius: 999px; background: var(--line); }
+.theme-switch span { position: absolute; top: 3px; left: 3px; width: 10px; height: 10px; border-radius: 50%; background: var(--teal); transition: transform 180ms ease; }
+.theme-toggle-btn.is-dark .theme-switch span { transform: translateX(14px); }
+.theme-toggle-btn.is-dark .theme-icon--sun { opacity: 0.45; }
+.theme-toggle-btn.is-dark .theme-icon--moon { color: #f4c7a8; }
+@media (max-width: 700px) {
+  .app-shell > nav { align-items: flex-start; flex-direction: column; gap: 14px; padding: 18px 20px; }
+  .nav-links { width: 100%; justify-content: space-between; gap: 10px; }
+  .nav-links a { font-size: 0.76rem; }
+}

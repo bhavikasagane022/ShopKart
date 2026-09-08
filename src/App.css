@@ -1,0 +1,2 @@
+.app-shell { min-height: 100svh; background: var(--paper); }
+.app-shell--dark { --paper: #17211f; --surface: #22302c; --ink: #f5f1e8; --muted: #b9c7c1; --line: #3b4a45; }
